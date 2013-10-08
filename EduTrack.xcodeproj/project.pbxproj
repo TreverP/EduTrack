@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		C9188C011804AD4200A6D0B8 /* EduTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9188BFF1804AD4200A6D0B8 /* EduTrack.xcdatamodeld */; };
 		C9188C1C1804B80800A6D0B8 /* ETTasksCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C1B1804B80800A6D0B8 /* ETTasksCell.m */; };
-		C9188C1F1804BA6F00A6D0B8 /* Grading_Structures.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */; };
-		C9188C221804BA6F00A6D0B8 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C211804BA6F00A6D0B8 /* Categories.m */; };
-		C9188C251804BA6F00A6D0B8 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C241804BA6F00A6D0B8 /* Notes.m */; };
-		C9188C281804BA6F00A6D0B8 /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C271804BA6F00A6D0B8 /* Courses.m */; };
-		C9188C2B1804BA6F00A6D0B8 /* Professors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C2A1804BA6F00A6D0B8 /* Professors.m */; };
-		C9188C2E1804BA6F00A6D0B8 /* Reminders.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C2D1804BA6F00A6D0B8 /* Reminders.m */; };
-		C9188C311804BA6F00A6D0B8 /* Class_Days.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C301804BA6F00A6D0B8 /* Class_Days.m */; };
-		C9188C341804BA7000A6D0B8 /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C331804BA7000A6D0B8 /* Tasks.m */; };
+		C9188C371804C21400A6D0B8 /* Grading_Structures.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C361804C21400A6D0B8 /* Grading_Structures.m */; };
+		C9188C3A1804C21400A6D0B8 /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C391804C21400A6D0B8 /* Tasks.m */; };
+		C9188C3D1804C21400A6D0B8 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C3C1804C21400A6D0B8 /* Categories.m */; };
+		C9188C401804C21400A6D0B8 /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C3F1804C21400A6D0B8 /* Courses.m */; };
+		C9188C431804C21400A6D0B8 /* Class_Days.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C421804C21400A6D0B8 /* Class_Days.m */; };
+		C9188C461804C21500A6D0B8 /* Professors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C451804C21500A6D0B8 /* Professors.m */; };
+		C9188C491804C21500A6D0B8 /* Reminders.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C481804C21500A6D0B8 /* Reminders.m */; };
+		C9188C4C1804C21500A6D0B8 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C4B1804C21500A6D0B8 /* Notes.m */; };
 		C97CA8C018049F8F006E6FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8BF18049F8F006E6FB4 /* Foundation.framework */; };
 		C97CA8C218049F8F006E6FB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8C118049F8F006E6FB4 /* CoreGraphics.framework */; };
 		C97CA8C418049F8F006E6FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8C318049F8F006E6FB4 /* UIKit.framework */; };
@@ -48,22 +48,22 @@
 		C9188C001804AD4200A6D0B8 /* EduTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EduTrack.xcdatamodel; sourceTree = "<group>"; };
 		C9188C1A1804B80800A6D0B8 /* ETTasksCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTasksCell.h; sourceTree = "<group>"; };
 		C9188C1B1804B80800A6D0B8 /* ETTasksCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTasksCell.m; sourceTree = "<group>"; };
-		C9188C1D1804BA6F00A6D0B8 /* Grading_Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grading_Structures.h; sourceTree = "<group>"; };
-		C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grading_Structures.m; sourceTree = "<group>"; };
-		C9188C201804BA6F00A6D0B8 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
-		C9188C211804BA6F00A6D0B8 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
-		C9188C231804BA6F00A6D0B8 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
-		C9188C241804BA6F00A6D0B8 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
-		C9188C261804BA6F00A6D0B8 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
-		C9188C271804BA6F00A6D0B8 /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
-		C9188C291804BA6F00A6D0B8 /* Professors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professors.h; sourceTree = "<group>"; };
-		C9188C2A1804BA6F00A6D0B8 /* Professors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professors.m; sourceTree = "<group>"; };
-		C9188C2C1804BA6F00A6D0B8 /* Reminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminders.h; sourceTree = "<group>"; };
-		C9188C2D1804BA6F00A6D0B8 /* Reminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminders.m; sourceTree = "<group>"; };
-		C9188C2F1804BA6F00A6D0B8 /* Class_Days.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_Days.h; sourceTree = "<group>"; };
-		C9188C301804BA6F00A6D0B8 /* Class_Days.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_Days.m; sourceTree = "<group>"; };
-		C9188C321804BA7000A6D0B8 /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
-		C9188C331804BA7000A6D0B8 /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
+		C9188C351804C21400A6D0B8 /* Grading_Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grading_Structures.h; sourceTree = "<group>"; };
+		C9188C361804C21400A6D0B8 /* Grading_Structures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grading_Structures.m; sourceTree = "<group>"; };
+		C9188C381804C21400A6D0B8 /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
+		C9188C391804C21400A6D0B8 /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
+		C9188C3B1804C21400A6D0B8 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		C9188C3C1804C21400A6D0B8 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		C9188C3E1804C21400A6D0B8 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
+		C9188C3F1804C21400A6D0B8 /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
+		C9188C411804C21400A6D0B8 /* Class_Days.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_Days.h; sourceTree = "<group>"; };
+		C9188C421804C21400A6D0B8 /* Class_Days.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_Days.m; sourceTree = "<group>"; };
+		C9188C441804C21500A6D0B8 /* Professors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professors.h; sourceTree = "<group>"; };
+		C9188C451804C21500A6D0B8 /* Professors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professors.m; sourceTree = "<group>"; };
+		C9188C471804C21500A6D0B8 /* Reminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminders.h; sourceTree = "<group>"; };
+		C9188C481804C21500A6D0B8 /* Reminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminders.m; sourceTree = "<group>"; };
+		C9188C4A1804C21500A6D0B8 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		C9188C4B1804C21500A6D0B8 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
 		C97CA8BC18049F8F006E6FB4 /* EduTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97CA8BF18049F8F006E6FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C97CA8C118049F8F006E6FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -206,22 +206,22 @@
 			isa = PBXGroup;
 			children = (
 				C9188BFF1804AD4200A6D0B8 /* EduTrack.xcdatamodeld */,
-				C9188C321804BA7000A6D0B8 /* Tasks.h */,
-				C9188C331804BA7000A6D0B8 /* Tasks.m */,
-				C9188C2F1804BA6F00A6D0B8 /* Class_Days.h */,
-				C9188C301804BA6F00A6D0B8 /* Class_Days.m */,
-				C9188C2C1804BA6F00A6D0B8 /* Reminders.h */,
-				C9188C2D1804BA6F00A6D0B8 /* Reminders.m */,
-				C9188C291804BA6F00A6D0B8 /* Professors.h */,
-				C9188C2A1804BA6F00A6D0B8 /* Professors.m */,
-				C9188C261804BA6F00A6D0B8 /* Courses.h */,
-				C9188C271804BA6F00A6D0B8 /* Courses.m */,
-				C9188C231804BA6F00A6D0B8 /* Notes.h */,
-				C9188C241804BA6F00A6D0B8 /* Notes.m */,
-				C9188C201804BA6F00A6D0B8 /* Categories.h */,
-				C9188C211804BA6F00A6D0B8 /* Categories.m */,
-				C9188C1D1804BA6F00A6D0B8 /* Grading_Structures.h */,
-				C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */,
+				C9188C4A1804C21500A6D0B8 /* Notes.h */,
+				C9188C4B1804C21500A6D0B8 /* Notes.m */,
+				C9188C471804C21500A6D0B8 /* Reminders.h */,
+				C9188C481804C21500A6D0B8 /* Reminders.m */,
+				C9188C441804C21500A6D0B8 /* Professors.h */,
+				C9188C451804C21500A6D0B8 /* Professors.m */,
+				C9188C411804C21400A6D0B8 /* Class_Days.h */,
+				C9188C421804C21400A6D0B8 /* Class_Days.m */,
+				C9188C3E1804C21400A6D0B8 /* Courses.h */,
+				C9188C3F1804C21400A6D0B8 /* Courses.m */,
+				C9188C3B1804C21400A6D0B8 /* Categories.h */,
+				C9188C3C1804C21400A6D0B8 /* Categories.m */,
+				C9188C381804C21400A6D0B8 /* Tasks.h */,
+				C9188C391804C21400A6D0B8 /* Tasks.m */,
+				C9188C351804C21400A6D0B8 /* Grading_Structures.h */,
+				C9188C361804C21400A6D0B8 /* Grading_Structures.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -337,19 +337,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9188C1F1804BA6F00A6D0B8 /* Grading_Structures.m in Sources */,
-				C9188C281804BA6F00A6D0B8 /* Courses.m in Sources */,
+				C9188C371804C21400A6D0B8 /* Grading_Structures.m in Sources */,
 				C9188C011804AD4200A6D0B8 /* EduTrack.xcdatamodeld in Sources */,
-				C9188C2E1804BA6F00A6D0B8 /* Reminders.m in Sources */,
-				C9188C251804BA6F00A6D0B8 /* Notes.m in Sources */,
-				C9188C311804BA6F00A6D0B8 /* Class_Days.m in Sources */,
+				C9188C401804C21400A6D0B8 /* Courses.m in Sources */,
+				C9188C4C1804C21500A6D0B8 /* Notes.m in Sources */,
+				C9188C491804C21500A6D0B8 /* Reminders.m in Sources */,
+				C9188C431804C21400A6D0B8 /* Class_Days.m in Sources */,
 				C9188C1C1804B80800A6D0B8 /* ETTasksCell.m in Sources */,
 				C9A1D5A81804A27900CE9F13 /* ETTasksViewController.m in Sources */,
+				C9188C3D1804C21400A6D0B8 /* Categories.m in Sources */,
 				C97CA8CC18049F8F006E6FB4 /* main.m in Sources */,
-				C9188C221804BA6F00A6D0B8 /* Categories.m in Sources */,
-				C9188C341804BA7000A6D0B8 /* Tasks.m in Sources */,
+				C9188C3A1804C21400A6D0B8 /* Tasks.m in Sources */,
+				C9188C461804C21500A6D0B8 /* Professors.m in Sources */,
 				C97CA8D018049F8F006E6FB4 /* ETAppDelegate.m in Sources */,
-				C9188C2B1804BA6F00A6D0B8 /* Professors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

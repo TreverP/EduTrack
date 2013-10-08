@@ -15,13 +15,14 @@
 
 @implementation Tasks
 
-@dynamic name;
-@dynamic earnedPoints;
-@dynamic totalPoints;
 @dynamic dueDate;
-@dynamic reminder;
-@dynamic note;
+@dynamic earnedPoints;
+@dynamic name;
+@dynamic totalPoints;
+@dynamic status;
 @dynamic category;
 @dynamic course;
+@dynamic note;
+@dynamic reminder;
 
 @end

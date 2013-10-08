@@ -13,13 +13,14 @@
 
 @interface Tasks : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * earnedPoints;
-@property (nonatomic, retain) NSNumber * totalPoints;
 @property (nonatomic, retain) NSDate * dueDate;
-@property (nonatomic, retain) Reminders *reminder;
-@property (nonatomic, retain) Notes *note;
+@property (nonatomic, retain) NSNumber * earnedPoints;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * totalPoints;
+@property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) Categories *category;
 @property (nonatomic, retain) Courses *course;
+@property (nonatomic, retain) Notes *note;
+@property (nonatomic, retain) Reminders *reminder;
 
 @end

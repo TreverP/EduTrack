@@ -15,16 +15,16 @@
 
 @implementation Courses
 
-@dynamic name;
-@dynamic location;
-@dynamic startTime;
-@dynamic endTime;
-@dynamic createdOn;
-@dynamic lastEditOn;
 @dynamic abbr;
-@dynamic tasks;
-@dynamic professor;
+@dynamic createdOn;
+@dynamic endTime;
+@dynamic lastEditOn;
+@dynamic location;
+@dynamic name;
+@dynamic startTime;
 @dynamic classDays;
 @dynamic gradingStructures;
+@dynamic professor;
+@dynamic tasks;
 
 @end

@@ -12,9 +12,9 @@
 
 @implementation Notes
 
-@dynamic text;
 @dynamic createdOn;
 @dynamic lastEditOn;
+@dynamic text;
 @dynamic tasks;
 
 @end

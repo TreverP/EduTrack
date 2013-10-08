@@ -12,9 +12,9 @@
 
 @implementation Reminders
 
-@dynamic reminderDate;
 @dynamic createdOn;
 @dynamic lastEditOn;
+@dynamic reminderDate;
 @dynamic tasks;
 
 @end

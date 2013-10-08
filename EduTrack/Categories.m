@@ -13,9 +13,9 @@
 @implementation Categories
 
 @dynamic color;
-@dynamic name;
 @dynamic createdOn;
 @dynamic lastEditOn;
+@dynamic name;
 @dynamic tasks;
 
 @end

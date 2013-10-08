@@ -13,9 +13,9 @@
 
 @interface Notes : NSManagedObject
 
-@property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSDate * createdOn;
 @property (nonatomic, retain) NSDate * lastEditOn;
+@property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 

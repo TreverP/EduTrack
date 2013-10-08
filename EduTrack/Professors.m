@@ -12,14 +12,14 @@
 
 @implementation Professors
 
+@dynamic createdOn;
+@dynamic email1;
+@dynamic email2;
+@dynamic lastEditOn;
 @dynamic name;
 @dynamic phone1;
 @dynamic phone2;
-@dynamic email1;
-@dynamic email2;
 @dynamic website;
-@dynamic createdOn;
-@dynamic lastEditOn;
 @dynamic course;
 
 @end

@@ -12,13 +12,13 @@
 
 @implementation Class_Days
 
-@dynamic monday;
-@dynamic tuesday;
-@dynamic wednesday;
-@dynamic thursday;
 @dynamic friday;
+@dynamic monday;
 @dynamic saturday;
 @dynamic sunday;
+@dynamic thursday;
+@dynamic tuesday;
+@dynamic wednesday;
 @dynamic courses;
 
 @end

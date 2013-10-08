@@ -13,25 +13,20 @@
 
 @interface Courses : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * location;
-@property (nonatomic, retain) NSDate * startTime;
-@property (nonatomic, retain) NSDate * endTime;
-@property (nonatomic, retain) NSDate * createdOn;
-@property (nonatomic, retain) NSDate * lastEditOn;
 @property (nonatomic, retain) NSString * abbr;
-@property (nonatomic, retain) NSSet *tasks;
-@property (nonatomic, retain) Professors *professor;
+@property (nonatomic, retain) NSDate * createdOn;
+@property (nonatomic, retain) NSDate * endTime;
+@property (nonatomic, retain) NSDate * lastEditOn;
+@property (nonatomic, retain) NSString * location;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSDate * startTime;
 @property (nonatomic, retain) NSSet *classDays;
 @property (nonatomic, retain) NSSet *gradingStructures;
+@property (nonatomic, retain) Professors *professor;
+@property (nonatomic, retain) NSSet *tasks;
 @end
 
 @interface Courses (CoreDataGeneratedAccessors)
-
-- (void)addTasksObject:(Tasks *)value;
-- (void)removeTasksObject:(Tasks *)value;
-- (void)addTasks:(NSSet *)values;
-- (void)removeTasks:(NSSet *)values;
 
 - (void)addClassDaysObject:(Class_Days *)value;
 - (void)removeClassDaysObject:(Class_Days *)value;
@@ -42,5 +37,10 @@
 - (void)removeGradingStructuresObject:(Grading_Structures *)value;
 - (void)addGradingStructures:(NSSet *)values;
 - (void)removeGradingStructures:(NSSet *)values;
+
+- (void)addTasksObject:(Tasks *)value;
+- (void)removeTasksObject:(Tasks *)value;
+- (void)addTasks:(NSSet *)values;
+- (void)removeTasks:(NSSet *)values;
 
 @end

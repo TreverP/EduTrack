@@ -63,6 +63,7 @@
         <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="earnedPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="totalPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="tasks" inverseEntity="Categories" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Courses" inverseName="tasks" inverseEntity="Courses" syncable="YES"/>
@@ -70,13 +71,13 @@
         <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reminders" inverseName="tasks" inverseEntity="Reminders" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Categories" positionX="358" positionY="180" width="128" height="118"/>
-        <element name="Courses" positionX="-74" positionY="-18" width="128" height="208"/>
-        <element name="Grading_Structures" positionX="-252" positionY="185" width="128" height="103"/>
-        <element name="Notes" positionX="360" positionY="36" width="128" height="103"/>
-        <element name="Professors" positionX="-72" positionY="-234" width="128" height="178"/>
-        <element name="Reminders" positionX="153" positionY="-99" width="128" height="103"/>
-        <element name="Tasks" positionX="151" positionY="36" width="128" height="163"/>
-        <element name="Class_Days" positionX="-252" positionY="-24" width="128" height="163"/>
+        <element name="Categories" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Class_Days" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Courses" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Grading_Structures" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Notes" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Professors" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Reminders" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tasks" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

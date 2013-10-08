@@ -13,9 +13,9 @@
 
 @interface Reminders : NSManagedObject
 
-@property (nonatomic, retain) NSDate * reminderDate;
 @property (nonatomic, retain) NSDate * createdOn;
 @property (nonatomic, retain) NSDate * lastEditOn;
+@property (nonatomic, retain) NSDate * reminderDate;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 

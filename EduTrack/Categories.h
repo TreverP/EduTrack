@@ -14,9 +14,9 @@
 @interface Categories : NSManagedObject
 
 @property (nonatomic, retain) NSString * color;
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * createdOn;
 @property (nonatomic, retain) NSDate * lastEditOn;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *tasks;
 @end
 
