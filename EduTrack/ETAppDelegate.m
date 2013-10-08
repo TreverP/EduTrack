@@ -7,40 +7,128 @@
 //
 
 #import "ETAppDelegate.h"
+#import "ETTasksViewController.h"
+#import "Tasks.h"
+
 
 @implementation ETAppDelegate
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCorrdinator = _persistentStoreCorrdinator;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+//    // Insert dummy test data.
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    Tasks *task = [NSEntityDescription insertNewObjectForEntityForName:@"Tasks" inManagedObjectContext:context];
+//    task.name = @"Math - Finish Math Homework 3.0";
+//    task.dueDate = [[NSDate date] dateByAddingTimeInterval:180];
+//    
+//    NSError *error = nil;
+//    if (![context save:&error]) {
+//        NSLog(@"Failure during save: %@", [error localizedDescription]);
+//    }
+//    
+//    // fetches and displays in console
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:context];
+//    [fetchRequest setEntity:entity];
+//    NSArray *fetchObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    
+//    for (Tasks *task in fetchObjects) {
+//        NSLog(@"Name: %@", task.name);
+//        NSLog(@"Due Date: %@", task.dueDate);
+//    }
+    
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
+    ETTasksViewController *controller = [[navigationController viewControllers] objectAtIndex:0];
+    controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
-							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+
+#pragma mark - Core Data stack
+
+/**
+ Returns the managed object context for the application.
+ If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+ */
+
+- (NSManagedObjectContext *)managedObjectContext {
+    
+    if (_managedObjectContext != nil) {
+        return _managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil) {
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    return _managedObjectContext;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+/**
+ Returns the managed object model for the application.
+ If the model doesn't already exist, it is created from the application's model.
+ */
+- (NSManagedObjectModel *)managedObjectModel
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if (_managedObjectModel != nil)
+    {
+        return _managedObjectModel;
+    }
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    return _managedObjectModel;
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+/**
+ Returns the persistent store coordinator for the application.
+ If the coordinator doesn't already exist, it is created and the application's store added to it.
+ */
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    if (_persistentStoreCorrdinator != nil)
+    {
+        return _persistentStoreCorrdinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"EduTrack.sqlite"];
+    
+    NSError *error = nil;
+    _persistentStoreCorrdinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    if (![_persistentStoreCorrdinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _persistentStoreCorrdinator;
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+- (void)saveContext {
+    
+    NSError *error = nil;
+    NSManagedObjectContext *objectContext = self.managedObjectContext;
+    if (objectContext != nil) {
+        if ([objectContext hasChanges] && ![objectContext save:&error]) {
+            // add error handling here
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            exit(-1);
+        }
+    }
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (NSURL *)applicationDocumentsDirectory {
+    
+    NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask] lastObject] );
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 @end

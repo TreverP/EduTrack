@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9188C011804AD4200A6D0B8 /* EduTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9188BFF1804AD4200A6D0B8 /* EduTrack.xcdatamodeld */; };
+		C9188C1C1804B80800A6D0B8 /* ETTasksCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C1B1804B80800A6D0B8 /* ETTasksCell.m */; };
+		C9188C1F1804BA6F00A6D0B8 /* Grading_Structures.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */; };
+		C9188C221804BA6F00A6D0B8 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C211804BA6F00A6D0B8 /* Categories.m */; };
+		C9188C251804BA6F00A6D0B8 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C241804BA6F00A6D0B8 /* Notes.m */; };
+		C9188C281804BA6F00A6D0B8 /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C271804BA6F00A6D0B8 /* Courses.m */; };
+		C9188C2B1804BA6F00A6D0B8 /* Professors.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C2A1804BA6F00A6D0B8 /* Professors.m */; };
+		C9188C2E1804BA6F00A6D0B8 /* Reminders.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C2D1804BA6F00A6D0B8 /* Reminders.m */; };
+		C9188C311804BA6F00A6D0B8 /* Class_Days.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C301804BA6F00A6D0B8 /* Class_Days.m */; };
+		C9188C341804BA7000A6D0B8 /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9188C331804BA7000A6D0B8 /* Tasks.m */; };
 		C97CA8C018049F8F006E6FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8BF18049F8F006E6FB4 /* Foundation.framework */; };
 		C97CA8C218049F8F006E6FB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8C118049F8F006E6FB4 /* CoreGraphics.framework */; };
 		C97CA8C418049F8F006E6FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8C318049F8F006E6FB4 /* UIKit.framework */; };
@@ -14,14 +24,14 @@
 		C97CA8CC18049F8F006E6FB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97CA8CB18049F8F006E6FB4 /* main.m */; };
 		C97CA8D018049F8F006E6FB4 /* ETAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97CA8CF18049F8F006E6FB4 /* ETAppDelegate.m */; };
 		C97CA8D318049F8F006E6FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97CA8D118049F8F006E6FB4 /* Main.storyboard */; };
-		C97CA8D618049F8F006E6FB4 /* ETFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97CA8D518049F8F006E6FB4 /* ETFirstViewController.m */; };
-		C97CA8D918049F8F006E6FB4 /* ETSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97CA8D818049F8F006E6FB4 /* ETSecondViewController.m */; };
 		C97CA8DB18049F8F006E6FB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97CA8DA18049F8F006E6FB4 /* Images.xcassets */; };
 		C97CA8E218049F8F006E6FB4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8E118049F8F006E6FB4 /* XCTest.framework */; };
 		C97CA8E318049F8F006E6FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8BF18049F8F006E6FB4 /* Foundation.framework */; };
 		C97CA8E418049F8F006E6FB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97CA8C318049F8F006E6FB4 /* UIKit.framework */; };
 		C97CA8EC18049F8F006E6FB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C97CA8EA18049F8F006E6FB4 /* InfoPlist.strings */; };
 		C97CA8EE18049F8F006E6FB4 /* EduTrackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97CA8ED18049F8F006E6FB4 /* EduTrackTests.m */; };
+		C9A1D5A81804A27900CE9F13 /* ETTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1D5A71804A27900CE9F13 /* ETTasksViewController.m */; };
+		C9A1D5AA1804A2F700CE9F13 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A1D5A91804A2F700CE9F13 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9188C001804AD4200A6D0B8 /* EduTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EduTrack.xcdatamodel; sourceTree = "<group>"; };
+		C9188C1A1804B80800A6D0B8 /* ETTasksCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTasksCell.h; sourceTree = "<group>"; };
+		C9188C1B1804B80800A6D0B8 /* ETTasksCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTasksCell.m; sourceTree = "<group>"; };
+		C9188C1D1804BA6F00A6D0B8 /* Grading_Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grading_Structures.h; sourceTree = "<group>"; };
+		C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grading_Structures.m; sourceTree = "<group>"; };
+		C9188C201804BA6F00A6D0B8 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		C9188C211804BA6F00A6D0B8 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		C9188C231804BA6F00A6D0B8 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		C9188C241804BA6F00A6D0B8 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		C9188C261804BA6F00A6D0B8 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
+		C9188C271804BA6F00A6D0B8 /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
+		C9188C291804BA6F00A6D0B8 /* Professors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professors.h; sourceTree = "<group>"; };
+		C9188C2A1804BA6F00A6D0B8 /* Professors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professors.m; sourceTree = "<group>"; };
+		C9188C2C1804BA6F00A6D0B8 /* Reminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminders.h; sourceTree = "<group>"; };
+		C9188C2D1804BA6F00A6D0B8 /* Reminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminders.m; sourceTree = "<group>"; };
+		C9188C2F1804BA6F00A6D0B8 /* Class_Days.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_Days.h; sourceTree = "<group>"; };
+		C9188C301804BA6F00A6D0B8 /* Class_Days.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_Days.m; sourceTree = "<group>"; };
+		C9188C321804BA7000A6D0B8 /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
+		C9188C331804BA7000A6D0B8 /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
 		C97CA8BC18049F8F006E6FB4 /* EduTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97CA8BF18049F8F006E6FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C97CA8C118049F8F006E6FB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +75,15 @@
 		C97CA8CE18049F8F006E6FB4 /* ETAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETAppDelegate.h; sourceTree = "<group>"; };
 		C97CA8CF18049F8F006E6FB4 /* ETAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETAppDelegate.m; sourceTree = "<group>"; };
 		C97CA8D218049F8F006E6FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C97CA8D418049F8F006E6FB4 /* ETFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETFirstViewController.h; sourceTree = "<group>"; };
-		C97CA8D518049F8F006E6FB4 /* ETFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETFirstViewController.m; sourceTree = "<group>"; };
-		C97CA8D718049F8F006E6FB4 /* ETSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETSecondViewController.h; sourceTree = "<group>"; };
-		C97CA8D818049F8F006E6FB4 /* ETSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETSecondViewController.m; sourceTree = "<group>"; };
 		C97CA8DA18049F8F006E6FB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C97CA8E018049F8F006E6FB4 /* EduTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EduTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97CA8E118049F8F006E6FB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C97CA8E918049F8F006E6FB4 /* EduTrackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EduTrackTests-Info.plist"; sourceTree = "<group>"; };
 		C97CA8EB18049F8F006E6FB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C97CA8ED18049F8F006E6FB4 /* EduTrackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EduTrackTests.m; sourceTree = "<group>"; };
+		C9A1D5A61804A27900CE9F13 /* ETTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTasksViewController.h; sourceTree = "<group>"; };
+		C9A1D5A71804A27900CE9F13 /* ETTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTasksViewController.m; sourceTree = "<group>"; };
+		C9A1D5A91804A2F700CE9F13 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A1D5AA1804A2F700CE9F13 /* CoreData.framework in Frameworks */,
 				C97CA8C218049F8F006E6FB4 /* CoreGraphics.framework in Frameworks */,
 				C97CA8C418049F8F006E6FB4 /* UIKit.framework in Frameworks */,
 				C97CA8C018049F8F006E6FB4 /* Foundation.framework in Frameworks */,
@@ -104,6 +133,7 @@
 		C97CA8BE18049F8F006E6FB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9A1D5A91804A2F700CE9F13 /* CoreData.framework */,
 				C97CA8BF18049F8F006E6FB4 /* Foundation.framework */,
 				C97CA8C118049F8F006E6FB4 /* CoreGraphics.framework */,
 				C97CA8C318049F8F006E6FB4 /* UIKit.framework */,
@@ -115,13 +145,10 @@
 		C97CA8C518049F8F006E6FB4 /* EduTrack */ = {
 			isa = PBXGroup;
 			children = (
-				C97CA8CE18049F8F006E6FB4 /* ETAppDelegate.h */,
-				C97CA8CF18049F8F006E6FB4 /* ETAppDelegate.m */,
-				C97CA8D118049F8F006E6FB4 /* Main.storyboard */,
-				C97CA8D418049F8F006E6FB4 /* ETFirstViewController.h */,
-				C97CA8D518049F8F006E6FB4 /* ETFirstViewController.m */,
-				C97CA8D718049F8F006E6FB4 /* ETSecondViewController.h */,
-				C97CA8D818049F8F006E6FB4 /* ETSecondViewController.m */,
+				C9A1D5AF1804A32C00CE9F13 /* Views */,
+				C9A1D5A41804A21000CE9F13 /* Application */,
+				C9A1D5A51804A21900CE9F13 /* Controllers */,
+				C9A1D5AE1804A31800CE9F13 /* Model */,
 				C97CA8DA18049F8F006E6FB4 /* Images.xcassets */,
 				C97CA8C618049F8F006E6FB4 /* Supporting Files */,
 			);
@@ -155,6 +182,58 @@
 				C97CA8EA18049F8F006E6FB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9A1D5A41804A21000CE9F13 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C97CA8CE18049F8F006E6FB4 /* ETAppDelegate.h */,
+				C97CA8CF18049F8F006E6FB4 /* ETAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		C9A1D5A51804A21900CE9F13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9A1D5A61804A27900CE9F13 /* ETTasksViewController.h */,
+				C9A1D5A71804A27900CE9F13 /* ETTasksViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C9A1D5AE1804A31800CE9F13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9188BFF1804AD4200A6D0B8 /* EduTrack.xcdatamodeld */,
+				C9188C321804BA7000A6D0B8 /* Tasks.h */,
+				C9188C331804BA7000A6D0B8 /* Tasks.m */,
+				C9188C2F1804BA6F00A6D0B8 /* Class_Days.h */,
+				C9188C301804BA6F00A6D0B8 /* Class_Days.m */,
+				C9188C2C1804BA6F00A6D0B8 /* Reminders.h */,
+				C9188C2D1804BA6F00A6D0B8 /* Reminders.m */,
+				C9188C291804BA6F00A6D0B8 /* Professors.h */,
+				C9188C2A1804BA6F00A6D0B8 /* Professors.m */,
+				C9188C261804BA6F00A6D0B8 /* Courses.h */,
+				C9188C271804BA6F00A6D0B8 /* Courses.m */,
+				C9188C231804BA6F00A6D0B8 /* Notes.h */,
+				C9188C241804BA6F00A6D0B8 /* Notes.m */,
+				C9188C201804BA6F00A6D0B8 /* Categories.h */,
+				C9188C211804BA6F00A6D0B8 /* Categories.m */,
+				C9188C1D1804BA6F00A6D0B8 /* Grading_Structures.h */,
+				C9188C1E1804BA6F00A6D0B8 /* Grading_Structures.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C9A1D5AF1804A32C00CE9F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C97CA8D118049F8F006E6FB4 /* Main.storyboard */,
+				C9188C1A1804B80800A6D0B8 /* ETTasksCell.h */,
+				C9188C1B1804B80800A6D0B8 /* ETTasksCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,10 +337,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97CA8D618049F8F006E6FB4 /* ETFirstViewController.m in Sources */,
+				C9188C1F1804BA6F00A6D0B8 /* Grading_Structures.m in Sources */,
+				C9188C281804BA6F00A6D0B8 /* Courses.m in Sources */,
+				C9188C011804AD4200A6D0B8 /* EduTrack.xcdatamodeld in Sources */,
+				C9188C2E1804BA6F00A6D0B8 /* Reminders.m in Sources */,
+				C9188C251804BA6F00A6D0B8 /* Notes.m in Sources */,
+				C9188C311804BA6F00A6D0B8 /* Class_Days.m in Sources */,
+				C9188C1C1804B80800A6D0B8 /* ETTasksCell.m in Sources */,
+				C9A1D5A81804A27900CE9F13 /* ETTasksViewController.m in Sources */,
 				C97CA8CC18049F8F006E6FB4 /* main.m in Sources */,
+				C9188C221804BA6F00A6D0B8 /* Categories.m in Sources */,
+				C9188C341804BA7000A6D0B8 /* Tasks.m in Sources */,
 				C97CA8D018049F8F006E6FB4 /* ETAppDelegate.m in Sources */,
-				C97CA8D918049F8F006E6FB4 /* ETSecondViewController.m in Sources */,
+				C9188C2B1804BA6F00A6D0B8 /* Professors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +560,7 @@
 				C97CA8F318049F8F006E6FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97CA8F418049F8F006E6FB4 /* Build configuration list for PBXNativeTarget "EduTrackTests" */ = {
 			isa = XCConfigurationList;
@@ -480,8 +569,22 @@
 				C97CA8F618049F8F006E6FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9188BFF1804AD4200A6D0B8 /* EduTrack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9188C001804AD4200A6D0B8 /* EduTrack.xcdatamodel */,
+			);
+			currentVersion = C9188C001804AD4200A6D0B8 /* EduTrack.xcdatamodel */;
+			path = EduTrack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C97CA8B418049F8F006E6FB4 /* Project object */;
 }

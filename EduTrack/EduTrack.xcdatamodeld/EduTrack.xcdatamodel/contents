@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Categories" representedClassName="Categories" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastEditOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="category" inverseEntity="Tasks" syncable="YES"/>
+    </entity>
+    <entity name="Class_Days" representedClassName="Class_Days" syncable="YES">
+        <attribute name="friday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="monday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="saturday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sunday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="thursday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="tuesday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wednesday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Courses" inverseName="classDays" inverseEntity="Courses" syncable="YES"/>
+    </entity>
+    <entity name="Courses" representedClassName="Courses" syncable="YES">
+        <attribute name="abbr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastEditOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="classDays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Class_Days" inverseName="courses" inverseEntity="Class_Days" syncable="YES"/>
+        <relationship name="gradingStructures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Grading_Structures" inverseName="course" inverseEntity="Grading_Structures" syncable="YES"/>
+        <relationship name="professor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professors" inverseName="course" inverseEntity="Professors" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="course" inverseEntity="Tasks" syncable="YES"/>
+    </entity>
+    <entity name="Grading_Structures" representedClassName="Grading_Structures" syncable="YES">
+        <attribute name="letterGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentageFrom" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="percentageTo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Courses" inverseName="gradingStructures" inverseEntity="Courses" syncable="YES"/>
+    </entity>
+    <entity name="Notes" representedClassName="Notes" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastEditOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="note" inverseEntity="Tasks" syncable="YES"/>
+    </entity>
+    <entity name="Professors" representedClassName="Professors" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="email1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastEditOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Courses" inverseName="professor" inverseEntity="Courses" syncable="YES"/>
+    </entity>
+    <entity name="Reminders" representedClassName="Reminders" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastEditOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="reminderDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="reminder" inverseEntity="Tasks" syncable="YES"/>
+    </entity>
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="earnedPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="tasks" inverseEntity="Categories" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Courses" inverseName="tasks" inverseEntity="Courses" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" inverseName="tasks" inverseEntity="Notes" syncable="YES"/>
+        <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reminders" inverseName="tasks" inverseEntity="Reminders" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Categories" positionX="358" positionY="180" width="128" height="118"/>
+        <element name="Courses" positionX="-74" positionY="-18" width="128" height="208"/>
+        <element name="Grading_Structures" positionX="-252" positionY="185" width="128" height="103"/>
+        <element name="Notes" positionX="360" positionY="36" width="128" height="103"/>
+        <element name="Professors" positionX="-72" positionY="-234" width="128" height="178"/>
+        <element name="Reminders" positionX="153" positionY="-99" width="128" height="103"/>
+        <element name="Tasks" positionX="151" positionY="36" width="128" height="163"/>
+        <element name="Class_Days" positionX="-252" positionY="-24" width="128" height="163"/>
+    </elements>
+</model>
