@@ -15,24 +15,24 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="W7s-Zd-pEZ" kind="relationship" relationship="viewControllers" id="0sn-TN-caR"/>
+                        <segue destination="QrI-Uf-MXL" kind="relationship" relationship="viewControllers" id="0sn-TN-caR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58" y="418"/>
         </scene>
-        <!--Table View Controller - Tasks-->
+        <!--Tasks View Controller - Tasks-->
         <scene sceneID="aYh-8a-bjm">
             <objects>
-                <tableViewController id="W7s-Zd-pEZ" sceneMemberID="viewController">
+                <tableViewController id="W7s-Zd-pEZ" customClass="ETTasksViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wje-6X-2fT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="61h-1s-1hJ" customClass="ETTasksCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="61h-1s-1hJ" id="Zmr-Pc-Zvv">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -45,7 +45,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="08/08/2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-dc-fh3">
-                                            <rect key="frame" x="20" y="20" width="80" height="21"/>
+                                            <rect key="frame" x="20" y="22" width="80" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -55,12 +55,18 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.86988366168478259" green="0.86988366168478259" blue="0.86988366168478259" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-ti-LNh">
-                                            <rect key="frame" x="98" y="22" width="23" height="17"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reminderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-ti-LNh">
+                                            <rect key="frame" x="97" y="20" width="23" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryColor" destination="Rb9-GL-VeH" id="rQ9-ik-74Y"/>
+                                    <outlet property="date" destination="nBQ-dc-fh3" id="GrU-x6-98r"/>
+                                    <outlet property="reminderImage" destination="G9p-ti-LNh" id="IPv-UH-nmd"/>
+                                    <outlet property="tasksTitle" destination="e4S-rw-raR" id="PpC-Tp-pWp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,13 +74,36 @@
                             <outlet property="delegate" destination="W7s-Zd-pEZ" id="8Bp-zY-gIB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Tasks" id="jgm-Dv-LNb"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="nNJ-ho-FhC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vD-3a-nRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="177"/>
+        </scene>
+        <!--Navigation Controller - Tasks-->
+        <scene sceneID="f0v-IT-nEK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QrI-Uf-MXL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tasks" image="taskIcon" id="jgm-Dv-LNb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k1w-PX-zRW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W7s-Zd-pEZ" kind="relationship" relationship="rootViewController" id="iFc-Yu-PLx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTH-9Z-0cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="447" y="177"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reminderIcon" width="32" height="32"/>
+        <image name="taskIcon" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

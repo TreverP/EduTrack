@@ -11,7 +11,6 @@
 @interface ETTasksCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *tasksTitle;
-@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UIImageView *reminderImage;
 @property (strong, nonatomic) IBOutlet UIView *categoryColor;
