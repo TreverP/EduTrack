@@ -7,6 +7,9 @@
 //
 
 #import "ETTasksViewController.h"
+#import "ETTasksDetailsViewController.h"
+#import "ETTasksCell.h"
+#import "Tasks.h"
 
 @interface ETTasksViewController ()
 
@@ -27,11 +30,14 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        NSLog(@"Unresolved error occur in viewDidLoad: %@, %@", error, [error userInfo]);
+        exit(-1);
+    }
+    
+    // set views title
+    self.title = @"Tasks";
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,21 +46,50 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Fetched Results Controller
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject: sort]];
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    self.fetchedResultsController = theFetchedResultsController;
+    
+    return _fetchedResultsController;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"taskCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+#pragma mark - Table view data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    // Configure the cell...
+    id sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    static NSString *CellIdentifier = @"taskCell";
+    ETTasksCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (!cell) {
+        cell = [[ETTasksCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    Tasks *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.tasksTitle.text = task.name;
+    cell.date.text = [NSString stringWithFormat:@"%@", task.dueDate];
+    cell.categoryColor.backgroundColor = [UIColor orangeColor];
     
     return cell;
 }
@@ -98,16 +133,31 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"taskDetailsSegue"]) {
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        ETTasksDetailsViewController *destinationViewController = segue.destinationViewController;
+        Tasks *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        destinationViewController.navigationItem.rightBarButtonItem.title = @"Edit";
+        destinationViewController.task = task;
+    }
+    
 }
 
- */
+#pragma mark - Custom Private Classes
+- (BOOL)isTaskPastDue:(NSDate *)date {
+    
+    if (![date compare:[NSDate date]] == NSOrderedDescending) {
+        return true;
+    } else
+        return false;
+    
+}
+
 
 @end
